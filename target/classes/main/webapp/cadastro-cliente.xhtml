@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>testes</title>
+</h:head>
+<h:body>
+	<h:form id="formulario">	    
+		<h1><h:outputText id="titulo" value="Cadastrar Novo Cliente"/> </h1>		
+		<h:panelGrid id="dados" columns="2">			
+			<h:outputText id="nomeLabel" value="Nome:" />
+			<h:inputText id="nome" label="Nome" value="#{clienteMB.cliente.nome}"
+		       	size="50"	maxlength="50" required="true" />
+		    
+		    <h:outputText id="endLabel" value="Endereço:" />
+			<h:inputText id="end" label="Endereco" value="#{clienteMB.cliente.endereco}"
+		       	size="100"	maxlength="100" required="false" />
+		       	
+		</h:panelGrid>
+		
+		<h:commandButton id="cadastrar" value="Cadastrar"
+			action="#{clienteMB.cadastrar}" />
+		<h:messages id="msg" />
+	</h:form>
+    
+     <h3>Lista de Clientes</h3>
+     <p:dataTable var="cli" value="#{clienteMB.clientes}">
+	     <p:column headerText="Id">
+	        <h:outputText value="#{cli.id}" />
+	     </p:column>
+	 
+	    <p:column headerText="Nome">
+	        <h:outputText value="#{cli.nome}" />
+	    </p:column>
+ 		
+ 		<p:column headerText="Endereco">
+	        <h:outputText value="#{cli.endereco}" />
+	    </p:column>
+     </p:dataTable>
+ 
+</h:body>
+</html>
