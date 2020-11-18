@@ -14,7 +14,7 @@ public class Testes {
 	public static void main(String[] args) {
 		EntityManager entityMgr = FabricaConexao.getConexao();
 		System.out.println("Ok. Conexao estabelecida via JPA.");
-		deleta(entityMgr);
+		// deleta(entityMgr);
 		
 	}
 	

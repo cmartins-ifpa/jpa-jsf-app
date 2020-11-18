@@ -72,7 +72,7 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<version>5.1.37</version>
 		</dependency>
-
+        
 		<!-- Driver do Postgresql 9.x ou maior -->
 		<dependency>
 			<groupId>org.postgresql</groupId>

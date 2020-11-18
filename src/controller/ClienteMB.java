@@ -19,7 +19,7 @@ import entidades.Cliente;
 import model.ClienteVO;
 import utilitarios.FabricaConexao;
 
-@Named
+@Named 
 @RequestScoped
 public class ClienteMB implements Serializable {
 	private ClienteVO cliente = new ClienteVO();	
@@ -42,7 +42,6 @@ public class ClienteMB implements Serializable {
 		this.cliente = new ClienteVO();
 		return "";
 	}
-
 	
 	// getters e setters
 	public ClienteVO getCliente() {
